@@ -6,9 +6,10 @@ It's very common situation that you have dependencies with other teammates in a 
 Well this is a web app created to tackle those problems. To be precise, it's like Jira(an application for issues and bugs tracking ) but a mini version of that.
 
 I recommend you to go to "About" section to see the full details of almost all the features to get clear idea about the app. And while you are already there why not just check the application.
-use following credentials to login:
-  username: user.new
-  PIN: 0000
+Use following credentials to login:
+username: user.new
+PIN: 0000
+
 Live demo:- https://sheltered-gorge-30220.herokuapp.com/
 
 Following are the features which make this web-app an efficient work manager:
