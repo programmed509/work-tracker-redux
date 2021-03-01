@@ -8,7 +8,7 @@ Well this is a web app created to tackle those problems. To be precise, it's lik
 I recommend you to go to "About" section to see the full details of almost all the features to get clear idea about the app. And while you are already there why not just check the application.
 Use following credentials to login:
 
-username: user.new
+username: guest.user
 
 PIN: 0000
 
