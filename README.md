@@ -1,4 +1,4 @@
-# work-tracker-redux
+# work-tracker( MERN stack and Redux )
 
 It's very common situation that you have dependencies with other teammates in a project. But it's always very confusing to keep track of all your dependencies and work together. You have to follow up with your teammates about the status via mails or other contacts. That's too tiring! isn't?
 
