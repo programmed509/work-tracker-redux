@@ -6,8 +6,6 @@ import NotFound from './components/Pages/NotFound';
 import Login from './components/User/Login';
 import AdminModal from './components/User/AdminModal';
 import AddUserModal from './components/User/AddUserModal';
-import TaskState from './context/TaskContext/TaskState'
-import UserState from './context/UserContext/UserState'
 import SecureRoute from './components/Pages/SecureRoute';
 import Api from './components/Pages/Api';
 import './App.css';
