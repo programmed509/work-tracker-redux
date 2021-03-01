@@ -20,7 +20,7 @@ Following are the features which make this web-app an efficient work manager:
    -> well you might be thinking that ofcourse we have to register to log into the app but there is a deal... Only your Admin has access to create your login details ( in work scenarios, Admin is usually the project manager).
    
 2) Login via 4 digit PIN.
-  -> that's an another relief, as you don't have to create passwords and type them everytime. Just create a 4 digit PIN of your choice and login instantly.
+  -> that's an another relief, as you don't have to create passwords and type them everytime. Just create a 4 digit PIN of your choice login instantly with your username.
 
 3) one look Dashboard.
   -> Dashboard has all the information that you need to know, All the tasks submitted by you to your teammates, all the tasks assigned to you by your teammates and also a form to add a task.
