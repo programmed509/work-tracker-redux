@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { connect } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import { login, clearErrors } from '../../redux/actions/userActions';
@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const Login = ({ users: { isAuthenticated , error}, login, clearErrors }) => {
     const history = useHistory();
-    
+    const inputRef = useRef(null)
     const [user, setuser ] = useState({
         username:'',
         pin:''
@@ -24,7 +24,9 @@ const Login = ({ users: { isAuthenticated , error}, login, clearErrors }) => {
         let elem2 = document.querySelectorAll('.tooltipped');
         M.Tooltip.init(elem2, {
           margin: 9
-        }); 
+        });
+
+        inputRef.current.focus();
         //eslint-disable-next-line
     }, [isAuthenticated, history, error])
 
@@ -45,7 +47,7 @@ const Login = ({ users: { isAuthenticated , error}, login, clearErrors }) => {
         <form id='login' className='myCard z-depth-1' style={{width:'20rem', position: 'absolute', left: '0',  right: '0', margin: 'auto' }} onSubmit={submitHandler}>
         
         <div className="input-field">
-            <input type="text" id="username1" name="username" value={username} onChange={changeHandler}/>
+            <input type="text" id="username1" ref={inputRef} name="username" value={username} onChange={changeHandler}/>
             <label htmlFor="username">Username</label>
         </div>
 

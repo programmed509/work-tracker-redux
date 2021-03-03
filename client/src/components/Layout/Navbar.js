@@ -45,6 +45,7 @@ const Navbar = ({ users: { isAuthenticated }, search, clearSearch }) => {
     return (
         <nav className='grey darken-3'>
         <div className='nav-wrapper'>
+        <a href = "/About" className='brand-logo center'>Work Tracker</a>
             { isAuthenticated ? 
             authLinks() :     
             guestLinks()
