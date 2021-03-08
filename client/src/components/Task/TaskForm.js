@@ -4,6 +4,7 @@ import { addTask } from '../../redux/actions/taskActions';
 import { loadUsers } from '../../redux/actions/userActions';
 import M from 'materialize-css/dist/js/materialize.min.js';
 import PropTypes from 'prop-types';
+import '../../App.css'
 
 const TaskForm = ({ users: { users, user }, addTask, loadUsers }) => {
     useEffect(()=>{
@@ -53,7 +54,7 @@ const TaskForm = ({ users: { users, user }, addTask, loadUsers }) => {
     const { task, description, assigned  } = tasks;
 
     return (
-        <>
+        <div className='mycontainer'>
         <h5> Hi! {user && user.name} </h5>
         Assign a new task:
         <form className="myCard z-depth-1" onSubmit={handleSubmit}>
@@ -101,7 +102,7 @@ const TaskForm = ({ users: { users, user }, addTask, loadUsers }) => {
             </div>
             </div>
         </form>
-        </>
+        </div>
     )
 }
 

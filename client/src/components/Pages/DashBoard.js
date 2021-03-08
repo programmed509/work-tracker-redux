@@ -14,6 +14,7 @@ const DashBoard = ({ users: { user }, authUser}) => {
 
     return(
         <>
+        <div className="mycontainer">
             <div className="row">
                 <div className="col m4">
                     <SubmittedTasks/>
@@ -26,7 +27,7 @@ const DashBoard = ({ users: { user }, authUser}) => {
                 </div>
                 { user && <MenuButton/>}
             </div>
-        
+            </div>
         </>
     )
 }

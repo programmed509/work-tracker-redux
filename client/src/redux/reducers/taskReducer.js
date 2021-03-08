@@ -25,8 +25,8 @@ export default (state=initialState, action) =>{
     switch(action.type){
         case ADD_TASK: return {
             ...state,
-            submitTasks: [...state.submitTasks, action.payload],
-            assignTasks: action.payload.assigned._id === action.payload.submitter._id ? [...state.assignTasks, action.payload] : state.assignTasks,
+            submitTasks: [ action.payload, ...state.submitTasks ],
+            assignTasks: action.payload.assigned._id === action.payload.submitter._id ? [ action.payload, ...state.assignTasks ] : state.assignTasks,
             loading: false
         }
         

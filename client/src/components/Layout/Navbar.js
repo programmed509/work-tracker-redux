@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { search, clearSearch } from '../../redux/actions/taskActions';
 import PropTypes from 'prop-types';
+import '../../App.css';
 
 const Navbar = ({ users: { isAuthenticated }, search, clearSearch }) => {
     
@@ -20,6 +21,8 @@ const Navbar = ({ users: { isAuthenticated }, search, clearSearch }) => {
 
     const guestLinks=()=>{
         return(
+            <>
+            <a href = "/About" className='brand-logo center'>Work Tracker</a>
             <ul className='right'>
                 <li>
                 <Link to='/About'>About</Link>
@@ -28,6 +31,7 @@ const Navbar = ({ users: { isAuthenticated }, search, clearSearch }) => {
                 <Link to='/Login'>Login</Link>
                 </li>
             </ul>
+            </>
         )
     }
 
@@ -35,7 +39,7 @@ const Navbar = ({ users: { isAuthenticated }, search, clearSearch }) => {
         return(
             <form>
                 <div className="input-field">
-                    <input type="search" name='search' value={text} onChange={onSearch} placeholder="Search tasks based on title, description, status, priority, users..."/>
+                    <input type="search" name='search' value={text} onChange={onSearch} placeholder="Search tasks based on title, description, status, users..."/>
                     <label className="label-icon" htmlFor="search"><i className="material-icons">search</i></label>
                     <i className="material-icons" onClick={clearSearchBar}>close</i>
                 </div>
@@ -45,7 +49,6 @@ const Navbar = ({ users: { isAuthenticated }, search, clearSearch }) => {
     return (
         <nav className='grey darken-3'>
         <div className='nav-wrapper'>
-        <a href = "/About" className='brand-logo center'>Work Tracker</a>
             { isAuthenticated ? 
             authLinks() :     
             guestLinks()

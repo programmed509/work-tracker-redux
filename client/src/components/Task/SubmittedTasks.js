@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { submittedTasks } from '../../redux/actions/taskActions';
 import Preloader from '../Layout/Preloader';
 import PropTypes from 'prop-types';
+import '../../App.css';
 
 const SubmittedTasks=({ tasks: { submitTasks, filteredSubmit, loading }, submittedTasks })=>{
 
@@ -30,7 +31,7 @@ if( submitTasks === null || loading ){
 
 return(
       <>
-      <div className="container">
+      <div className="mycontainer">
         <h5>Submitted by you:</h5>
         <form>
         Sort by: <label>&nbsp;&nbsp;
