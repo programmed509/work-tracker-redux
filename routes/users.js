@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const auth = require('./auth');
 const Tasks = require('../models/Tasks');
+const Movies = require('../models/Movies');
 
 router.post('/register', async (req,res)=>{
     
@@ -33,8 +34,24 @@ router.post('/register', async (req,res)=>{
 
 router.get('/all', async (req,res)=>{
     try {
+        let fields = req?.query?.fields;
+        fields = fields?.replaceAll(',', ' ');
+        const result = await Users.find().select(fields)
+        res.json(result)
+
+    } catch (error) {
         
-        const result = await Users.find()
+        console.log(error)
+        res.status(500).json('Server error')
+    
+    }  
+})
+
+router.get('/movies', async (req,res)=>{
+    try {
+        let fields = req?.query?.fields;
+        fields = fields?.replaceAll(',', ' ');
+        const result = await Movies.find().select(fields)
         res.json(result)
 
     } catch (error) {
